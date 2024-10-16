@@ -4,7 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, Pass
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
-from .forms import CustomUserCreationForm  # Import the custom form
+from .forms import CustomUserCreationForm
 import logging
 
 def login_view(request):
@@ -70,7 +70,7 @@ def change_password_view(request):
         form = PasswordChangeForm(user=request.user, data=request.POST)
         if form.is_valid():
             user = form.save()
-            update_session_auth_hash(request, user)  # Important!
+            update_session_auth_hash(request, user)
             messages.success(request, "Your password was successfully updated!")
             return redirect('dashboard')
         else:
