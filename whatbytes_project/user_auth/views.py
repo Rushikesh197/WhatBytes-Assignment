@@ -4,6 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, Pass
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
+from .forms import CustomUserCreationForm  # Import the custom form
 import logging
 
 def login_view(request):
@@ -19,7 +20,7 @@ def login_view(request):
 
 def signup_view(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, "Registration successful! You can now log in.")
@@ -27,7 +28,7 @@ def signup_view(request):
         else:
             messages.error(request, "Error in registration. Please check your input.")
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     return render(request, 'user_auth/signup.html', {'form': form})
 
 # logger = logging.getLogger(__name__)
