@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WhatBytes{% endblock %}</title>
+    
+    <!-- Load static files -->
+    {% load static %}
+    
+    <!-- Linking to the CSS file -->
+    <link rel="stylesheet" href="{% static 'user_auth/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-title">
+                WhatBytes Assignment
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
