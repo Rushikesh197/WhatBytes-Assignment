@@ -41,10 +41,10 @@ whatbytes_project/
 │   │       ├── base.html             # Base layout for other pages
 │   │       ├── login.html            # Login page
 │   │       ├── signup.html           # Signup page
-│   │       ├── forgot_password.html   # Forgot password page
+│   │       ├── forgot_password.html  # Forgot password page
 │   │       ├── dashboard.html        # Dashboard for logged-in users
 │   │       ├── profile.html          # Profile page
-│   │       └── registration/          # Directory for password reset templates
+│   │       └── registration/         # Directory for password reset templates
 │   │           ├── password_reset_complete.html
 │   │           ├── password_reset_done.html
 │   │           └── password_reset_form.html
