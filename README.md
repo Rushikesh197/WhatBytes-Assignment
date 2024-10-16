@@ -75,27 +75,23 @@ To set up this project, follow these steps:
 2. **Create a Virtual Environment**:
    It is recommended to create a virtual environment to manage your project dependencies.
    ```bash
-   python -m venv venv
+   python -m venv env
    ```
 
 3. **Activate the Virtual Environment**:
    - On Windows:
      ```bash
-     venv\Scripts\activate
+     env\Scripts\activate
      ```
    - On macOS/Linux:
      ```bash
-     source venv/bin/activate
+     source env/bin/activate
      ```
 
 4. **Install Dependencies**:
    Ensure that you have Django installed. If you have a `requirements.txt` file, install the dependencies:
    ```bash
    pip install -r requirements.txt
-   ```
-   If you don’t have this file, install Django directly:
-   ```bash
-   pip install django
    ```
 
 5. **Run Migrations**:
